@@ -22,43 +22,41 @@ int is_alphabet(char c)
         return TRUE;
     return FALSE;
 }
+
 int is_number(char c)
 {
-    if (48 <= c && c <= 59)
-        return TRUE;
-    return FALSE;
+	if (48 <= c && c <= 57)
+		return TRUE;
+	return FALSE;
 }
+
 char *ft_strcapitalize(char *str)
 {
 	int state;
 	int i;
-	i = 0;
-	state = 0;
-	if (state == 0)
-	{
-		state = is_alphabet(str[i]) ? 1 : 3;
-	}
-	while(str[i] != '\0')
+
+	i = -1;
+	state = (is_alphabet(str[i]) || is_number(str[i])) ? 1 : 3;
+	while(str[++i] != '\0')
 	{
 		if (state == 1)
 		{
 			str[i] = is_lowercase(str[i]) ? str[i] - 32 : str[i];
-			
-			state = (is_alphabet(str[i+1]) || is_number(str[i+1])) ?  2 : 3;
+			state = (is_alphabet(str[i]) || is_number(str[i])) ?  2 : 3;
 		}
 		else if (state == 2)
 		{
 			str[i] = is_uppercase(str[i]) ? str[i] + 32 : str[i];
-			state = (is_alphabet(str[i+1]) || is_number(str[i+1])) ? 2 : 3;
+			state = i(is_alphabet(str[i]) || is_number(str[i])) ? 2 : 3;
 		}
 		else if (state ==3)
 		{
-			state = (is_alphabet(str[i+1]) || is_number(str[i+1])) ? 1 : 3;
+			state = (is_alphabet(str[i]) || is_number(str[i])) ? 1 : 3;
 		}
-		i++;
 	}
 	return (str);
 }
+
 int main(void)
 {
     char *string;
