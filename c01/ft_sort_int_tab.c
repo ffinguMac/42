@@ -25,8 +25,7 @@ int main(void)
 {
 	int tab[10];
 	int i;
-	int j;
-	int size;
+
 	tab[0] = 15;
 	tab[1] = 7;
 	tab[2] = 4;
