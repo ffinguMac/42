@@ -13,8 +13,6 @@ int ft_is_prime(int nb)
         cnt++;
     }
     return (1);
-    
-    
 }
 
 int main(void)
