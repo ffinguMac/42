@@ -25,12 +25,14 @@ int main(void)
 	int size;
 
 	size = 20;
+	
 	i = 0;
 	while (i < size)
 	{
 		tab[i] = i;
 		i++;
 	}
+	
 	i = 0;
 	while (i < size)
 	{
@@ -38,6 +40,7 @@ int main(void)
 		i++;
 	}
 	ft_rev_int_tab(tab, size);
+	
 	i = 0;
 	while (i < size)
 	{

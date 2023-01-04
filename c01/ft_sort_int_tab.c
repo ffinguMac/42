@@ -21,6 +21,7 @@ void ft_sort_int_tab(int *tab, int size)
         i++;
     }
 }
+
 int main(void)
 {
 	int tab[10];

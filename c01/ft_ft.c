@@ -9,6 +9,7 @@ void main()
 {
     int a;
     int *n;
+    
     a = 1;
     n = &a;
     ft_ft(n);

@@ -1,4 +1,5 @@
 #include <unistd.h>
+
 void ft_print_alphabet(void)
 {
     int i;
@@ -10,6 +11,7 @@ void ft_print_alphabet(void)
         i++;
     }
 }
+
 int main(void)
 {
     ft_print_alphabet();

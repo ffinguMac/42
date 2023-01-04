@@ -1,4 +1,5 @@
 #include <unistd.h>
+
 void ft_print_number(void)
 {
     int i = 48;
@@ -8,6 +9,7 @@ void ft_print_number(void)
         i++;
     }
 }
+
 int main(void)
 {
     ft_print_number();

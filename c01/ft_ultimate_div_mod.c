@@ -1,21 +1,25 @@
 #include <stdio.h>
-#include <unistd.h>
 
-int ft_strlen(char *str)
+void ft_ultimate_div_mod(int *a, int *b)
 {
-    int cnt;
-    cnt = 0;
-    while (*(str+cnt) != '\0')
-    {
-        cnt++;
-    }
-    return (cnt);
+    int div;
+    int mod;
+
+    div = *a / *b;
+    mod = *a % *b;
+    *a = div;
+    *b = mod;
 }
 
-void main()
+int     main(void)
 {
-    char *str;
-    str = "Macguffin";
-    printf("%d\n", ft_strlen(str));
-    
+    int a, b, *ptr1, *ptr2;
+
+    a = 81;
+    b = 8;
+    ptr1 = &a;
+    ptr2 = &b;
+    ft_ultimate_div_mod(ptr1, ptr2);
+    printf("%d\n", a);
+    printf("%d\n", b);
 }

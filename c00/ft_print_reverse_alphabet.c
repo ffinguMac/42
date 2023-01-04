@@ -1,4 +1,5 @@
 #include <unistd.h>
+
 void ft_print_reverse_alphabet(void)
 {
     int i;
@@ -10,8 +11,8 @@ void ft_print_reverse_alphabet(void)
         i--;
     }
 }
+
 int main(void)
 {
     ft_print_reverse_alphabet();
 }
-
